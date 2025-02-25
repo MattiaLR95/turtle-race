@@ -15,4 +15,15 @@ for num in range(6):
     t.goto(x = -240, y = pos_y[num])
     turtles.append(t)
 
+start = True
+while start:
+    for turtle in turtles:
+        if turtle.xcor() > 230:
+            start= False
+            if puntata == turtle.pencolor():
+                print("You Win!!")
+            else:
+                print("You Lost")
+        turtle.forward(randint(0,10))
+
 screen.exitonclick()
